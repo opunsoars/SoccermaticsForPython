@@ -1,0 +1,1 @@
+STATSBOMB_DATA="/mnt/d/xFootball/datahub/open-data/data"

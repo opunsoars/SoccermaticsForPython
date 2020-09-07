@@ -1,17 +1,17 @@
 #Load in Statsbomb competition and match data
 #This is a library for loading json files.
 import json
-
+from config import STATSBOMB_DATA
 #Load the competition file
 #Got this by searching 'how do I open json in Python'
-with open('Statsbomb/data/competitions.json') as f:
+with open(f'{STATSBOMB_DATA}/competitions.json') as f:
     competitions = json.load(f)
     
 #Womens World Cup 2019 has competition ID 72
-competition_id=72
+competition_id=str(72)
 
 #Load the list of matches for this competition
-with open('Statsbomb/data/matches/'+str(competition_id)+'/30.json') as f:
+with open(f'{STATSBOMB_DATA}/matches/{competition_id}/30.json') as f:
     matches = json.load(f)
 
 #Look inside matches
