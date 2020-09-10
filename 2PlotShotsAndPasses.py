@@ -4,23 +4,23 @@
 #Function to draw the pitch
 import matplotlib.pyplot as plt
 import numpy as np
-
+from config import STATSBOMB_DATA
 #Size of the pitch in yards (!!!)
 pitchLengthX=120
 pitchWidthY=80
 
 #ID for England vs Sweden Womens World Cup
-match_id_required = 69301
+match_id_required = '69301'
 home_team_required ="England Women's"
 away_team_required ="Sweden Women's"
 
 # Load in the data
 # I took this from https://znstrider.github.io/2018-11-11-Getting-Started-with-StatsBomb-Data/
-file_name=str(match_id_required)+'.json'
+file_name= f"{match_id_required}.json"
 
 #Load in all match events 
 import json
-with open('Statsbomb/data/events/'+file_name) as data_file:
+with open(f'{STATSBOMB_DATA}/events/{match_id_required}.json') as data_file:
     #print (mypath+'events/'+file)
     data = json.load(data_file)
 
